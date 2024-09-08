@@ -7,6 +7,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('index'); // Nama file Blade Anda
+        return view('templates.index'); // Nama file Blade Anda
     }
 }
