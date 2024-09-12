@@ -1,6 +1,7 @@
+<!-- index.blade.php -->
+
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Yoga Studio Template">
@@ -18,8 +19,8 @@
     <link rel="stylesheet" href="{{ asset('yummy2-master/css/nice-select.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('yummy2-master/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('yummy2-master/css/style.css') }}" type="text/css">
+    @stack('style')
 </head>
-
 <body>
     @include('templates.component.header')
     @include('templates.component.page-top-recipe')
@@ -29,6 +30,8 @@
     @include('templates.component.footer')
     @include('templates.component.search-model')
 
+    @yield('content')
+
     <!-- Js Plugins -->
     <script src="{{ asset('yummy2-master/js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('yummy2-master/js/bootstrap.min.js') }}"></script>
@@ -36,6 +39,6 @@
     <script src="{{ asset('yummy2-master/js/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('yummy2-master/js/mixitup.min.js') }}"></script>
     <script src="{{ asset('yummy2-master/js/main.js') }}"></script>
+    @stack('scripts')
 </body>
-
 </html>
