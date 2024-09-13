@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('steps', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('recipe_id');
+            $table->text('description');
+            $table->integer('step_number');
             $table->timestamps();
+
         });
     }
 
